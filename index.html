@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task1</title>
+      <!--  <script src="task1.js" defer></script>  -->
+    </head>
+    <body>
+        <label>UserName</label>
+        <input type="text" id="name">
+        <br><br>
+        <label>Age</label>
+        <input type="number" id="age">
+        <br><br>
+        <button id="btn">Submit</button>
+        <br><br><br><br><br>
+        <table border="1" id="table">
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+            </tr>
+        </table>
+        <script>
+            const butto = document.getElementById("btn");
+//console.log(butto);
+
+butto.addEventListener("click",()=>{
+    var name= document.getElementById("name").value;
+//console.log(name);
+var age = document.getElementById("age").value;
+   var tab = document.getElementById("table");
+   //console.log(tab);
+   var row = tab.insertRow(-1);
+   //console.log(row);
+   var col1 = row.insertCell(0);
+   var col2 = row.insertCell(1);
+   //console.log(col2);
+   col1.innerHTML = name;
+   col2.innerHTML = age;
+})
+        </script>
+    </body>
+</html>
